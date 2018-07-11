@@ -16,7 +16,7 @@ class Resume(models.Model):
     date_added = models.DateTimeField(auto_now_add= True)
     githuburl = models.CharField(max_length = 255, blank = True)
     live_app_deployment = models.CharField(max_length = 255 , blank = True)
-    article_image = models.ImageField()
+    article_image = models.ImageField(blank = True)
 
     def __str__(self):
         return self.title
