@@ -37,3 +37,8 @@ def view_python(request):
     python_repos = Resume.objects.all()
 
     return render(request, 'python/main.html' , {"python":python_repos})
+
+def view_html(request):
+    html_repos = Resume.objects.all()
+
+    return render(request, 'html/main.html' , {"HTML":html_repos})

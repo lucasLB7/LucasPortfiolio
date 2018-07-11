@@ -17,7 +17,7 @@
           <section class="jumbotron text-center">
             <div class="container">
               <h1 class="jumbotron-heading">GitHub portal</h1>
-              
+              <h1>MY HTML APPS</h1>
               <p class="lead text-muted">Browse through my GitHub repositories or view them directly in GitHub</p>
               <p>
                 <a href="https://github.com/lucasLB7" class="btn btn-primary">Go to GitHub instead</a>
@@ -29,8 +29,8 @@
             <div class="container">
     
             <div class="row">
-                {% for items in python %}
-                {% if items.category == "PYTHON" %}
+                {% for items in HTML %}
+                {% if items.category == "HTML" %}
                  
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
@@ -46,6 +46,7 @@
                     </div>
                   </div>
                 </div>
+               
                 {% endif %}
                 {% endfor %}
                

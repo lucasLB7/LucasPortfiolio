@@ -6,7 +6,7 @@ import datetime
 class Resume(models.Model):
     cat_choices = (
         ("PYTHON","PYTHON"),
-        ("HTLM","HTML"),
+        ("HTML","HTML"),
         ("BLENDER","BLENDER"),
     )
 
