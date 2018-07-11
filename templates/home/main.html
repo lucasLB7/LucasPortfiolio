@@ -1,205 +1,209 @@
 {% extends 'home/base.html'%}
-{% load static bootstrap4 %}
-{% comment %} {% load mathfilters %} {% endcomment %}
+{% load static bootstrap4 %} {% comment %} {% load mathfilters %} {% endcomment %} 
 {% block content %}
 
 
 <header class="masthead text-center text-white d-flex header-background">
     <div class="container my-auto">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h1 class="text-uppercase blackfont">
-            <strong>My portfolio</strong>
-            <br>
-            <small>Lucas Benoit Lambert</small>
-          </h1>
-          <hr>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="text-uppercase blackfont">
+                    <strong>My portfolio</strong>
+                    <br>
+                    <small>Lucas Benoit Lambert</small>
+                </h1>
+                <hr>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-info mb-5">It always seems impossible untill it's done.</p>
+                <a class="btn btn-danger btn-xl js-scroll-trigger" href="/repos">View GitHub repos
+                    <br>
+                    <small>This does
+                        <strong>not</strong> take you to GitHub</small>
+                </a>
+            </div>
         </div>
-        <div class="col-lg-8 mx-auto">
-          <p class="text-info mb-5">It always seems impossible untill it's done.</p>
-          <a class="btn btn-danger btn-xl js-scroll-trigger" href="/repos">View GitHub repos<br><small>This does <strong>not</strong> take you to GitHub</small></a>
-        </div>
-      </div>
     </div>
-  </header>
+</header>
 
-  <section class="bg-primary" id="recent">
+<section class="bg-primary" id="recent">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading text-white">My recent projects</h2>
-          <hr class="light my-4">
-          <p class="text-faded mb-4">Discover move about my latest projects and accomplishments.</p>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">I want to see them all</a>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading text-white">My recent projects</h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4">Discover move about my latest projects and accomplishments.</p>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">I want to see them all</a>
 
-                  <h2 class="section-heading text-white" style="margin-top:10%;">CATEGORIZED</h2>
-          <div class="row">
-          
-                <div class="col-lg-3 mx-auto padded-card tooltip-test" title="Basic websites with HTML, CSS and javaScript!">
-                    <a href="/my_html_apps">
-                    <h3 class="mb-3">HTML/CSS</h3>
-                    <img src="https://i.imgur.com/hrVqw5N.png" style="width:100px;" alt="">
-                    </a>
-                    
-                </div>
+                <h2 class="section-heading text-white" style="margin-top:10%;">CATEGORIZED</h2>
+                <div class="row">
 
-                <div class="col-lg-4 mx-auto padded-card tooltip-test" title="Python based frameworks for fast and powerful web applications!!">
+                    <div class="col-lg-3 mx-auto padded-card tooltip-test" title="Basic websites with HTML, CSS and javaScript!">
+                        <a href="/my_html_apps">
+                            <h3 class="mb-3">HTML/CSS</h3>
+                            <img src="https://i.imgur.com/hrVqw5N.png" style="width:100px;" alt="">
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-4 mx-auto padded-card tooltip-test" title="Python based frameworks for fast and powerful web applications!!">
                         <a href="/my_python_apps">
-                    <h3 class="mb-3">DJANGO/FLASK</h3>
-                    <img src="https://i.imgur.com/G7t7APX.png"  style="width:100px;" alt="">
-                        </a>    
+                            <h3 class="mb-3">DJANGO/FLASK</h3>
+                            <img src="https://i.imgur.com/G7t7APX.png" style="width:100px;" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="col-lg-3 mx-auto padded-card tooltip-test" title="Discover the power of CGI and modeling with BLENDER!">
+                        <a href="/my_blender_apps">
+
+                        <h3 class="mb-3">BLENDER</h3>
+
+                        <img src="https://i.imgur.com/kkBs5Km.png" style="width:100px;" alt="">
+                        </a>
+
+                        
+                    </div>
+
                 </div>
-                
-
-                <div class="col-lg-3 mx-auto padded-card tooltip-test" title="Discover the power of CGI and modeling with BLENDER!">
-
-                    <h3 class="mb-3">BLENDER</h3>
-
-                    <img src="https://i.imgur.com/kkBs5Km.png"  style="width:100px;" alt="">
-                </div>
-
-          </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <section id="services">
+<section id="services">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">ABOUT ME</h2>
-          <img id="prof-image" src="https://i.imgur.com/C1ZJ8on.jpg" class="profile-picture" alt="">
-          <hr class="my-4">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">ABOUT ME</h2>
+                <img id="prof-image" src="https://i.imgur.com/KA1YZPV.jpg" class="profile-picture" alt="">
+                <hr class="my-4">
+            </div>
         </div>
-      </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box mt-5 mx-auto">
-            <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">Work experience</h3>
-            <p class="text-muted mb-0">Where have I worked..</p>
-            <button class="btn btn-success" href="#">Work experience</button>
-          </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">Work experience</h3>
+                    <p class="text-muted mb-0">Where have I worked..</p>
+                    <button class="btn btn-success" href="#">Work experience</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">Passions/hobbies</h3>
+                    <p class="text-muted mb-0">Your passions define who you are..</p>
+                    <button class="btn btn-primary" href="#">Passions/hobbies</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">Acheivments</h3>
+                    <p class="text-muted mb-0">just the things I'm proud of..</p>
+                    <button class="btn btn-warning" href="#">Acheivments</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3">A bit about me</h3>
+                    <p class="text-muted mb-0">Find out a bit about me..</p>
+                    <button class="btn btn-danger" href="#">about me</button>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box mt-5 mx-auto">
-            <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">Passions/hobbies</h3>
-            <p class="text-muted mb-0">Your passions define who you are..</p>
-            <button class="btn btn-primary" href="#">Passions/hobbies</button>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box mt-5 mx-auto">
-            <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">Acheivments</h3>
-            <p class="text-muted mb-0">just the things I'm proud of..</p>
-            <button class="btn btn-warning" href="#">Acheivments</button>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box mt-5 mx-auto">
-            <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
-            <h3 class="mb-3">A bit about me</h3>
-            <p class="text-muted mb-0">Find out a bit about me..</p>
-            <button class="btn btn-danger" href="#">about me</button>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
 
-  <section class="bg-dark text-white" id="contact">
+<section class="bg-dark text-white" id="contact">
 
-        <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="my-4">
-                    <p class="mb-5">I'm always happy to speak and answer your questions!</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-lg-4 ml-auto text-center">
-                    <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
-                    <p>+254 728 787 432</p>
-                  </div>
-                  <div class="col-lg-4 mr-auto text-center">
-                    <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
-                    <p>
-                      <a href="mailto:plucaslambert@gmail.com">plucaslambert@gmail.com</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-  </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading">Let's Get In Touch!</h2>
+                <hr class="my-4">
+                <p class="mb-5">I'm always happy to speak and answer your questions!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 ml-auto text-center">
+                <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                <p>+254 728 787 432</p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+                <p>
+                    <a href="mailto:plucaslambert@gmail.com">plucaslambert@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <section id="social_media">
-        <div class="container text-center">
-            <h2 class="mb-4">My facebook page</h2>
-            <img src="https://i.imgur.com/n8b1Vyb.png" href="https://www.facebook.com/lambiigangi.BUMZY" alt="" class="grow-on-hover">
-        </div>    
-  </section>
+<section id="social_media">
+    <div class="container text-center">
+        <h2 class="mb-4">My facebook page</h2>
+        <img src="https://i.imgur.com/n8b1Vyb.png" alt="" class="grow-on-hover">
+    </div>
+</section>
 
 <footer class="text-muted">
     <div class="container">
         <p class="float-right">
             <a href="#">Back to top</a>
         </p>
-            <p>Designed and created by Lucas B. Lambert. All rights reserved</p>
+        <p>Designed and created by Lucas B. Lambert. All rights reserved</p>
 
     </div>
 </footer>
 
 {% endblock %}
-
 {% block script %}
 {{ block.super }}
 
 
 
 <script>
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 250, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
+    // Select all links with hashes
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 250, function () {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
         });
-      }
-    }
-  });
 </script>
 
 {% endblock %}
-	

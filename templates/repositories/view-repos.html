@@ -1,65 +1,63 @@
 {% extends 'repositories/base.html'%}
-{% load static bootstrap4 %}
-{% comment %} {% load mathfilters %} {% endcomment %}
-{% block content %}
-
-
-{% comment %} {{user_details}}
+{% load static bootstrap4 %} {% comment %} {% load mathfilters %} {% endcomment %}
+{% block content %} {% comment %} {{user_details}}
 <h1>BREAK!</h1>
-{{repos_details}}  {% endcomment %}
+{{repos_details}} {% endcomment %}
 
 <body>
 
-    
-    
-        <main role="main">
-    
-          <section class="jumbotron text-center">
-            <div class="container">
-              <h1 class="jumbotron-heading">GitHub portal</h1>
-              <p class="lead text-muted">Browse through my GitHub repositories or view them directly in GitHub</p>
-              <p>
-                <a href="https://github.com/lucasLB7" class="btn btn-primary">Go to GitHub instead</a>
-              </p>
-            </div>
-          </section>
-    
-          <div class="album py-5 bg-light">
-            <div class="container">
-    
-              <div class="row">
-                  {% for repos in repos_details %}
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                    {% comment %} <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> {% endcomment %}
-                    <div class="card-body">
-                        <h3 class="card-text">{{repos.name}}</h3>
-                        <p class="card-text">{{repos.description}}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a class="btn btn-danger btn-sl js-scroll-trigger" href="{{repos.html_url}}">View on GitHub</a>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                        <small class="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-               
 
-              </div>
+
+    <main role="main">
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">GitHub portal</h1>
+                <p class="lead text-muted">Browse through my GitHub repositories or view them directly in GitHub</p>
+                <p>
+                    <a href="https://github.com/lucasLB7" class="btn btn-primary">Go to GitHub instead</a>
+                </p>
             </div>
-          </div>
-    
-        </main>
-    
-        <footer class="text-muted">
-          <div class="container">
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    {% for repos in repos_details %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            {% comment %}
+                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"
+                                alt="Card image cap"> {% endcomment %}
+                            <div class="card-body">
+                                <h3 class="card-text">{{repos.name}}</h3>
+                                <p class="card-text">{{repos.description}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a class="btn btn-danger btn-sl js-scroll-trigger" href="{{repos.html_url}}">View on GitHub</a>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
             <p class="float-right">
-              <a href="#">Back to top</a>
+                <a href="#">Back to top</a>
             </p>
             <p>Designed and created by Lucas B. Lambert. All rights reserved</p>
 
-          </div>
-        </footer>
+        </div>
+    </footer>
 
-{% endblock %}
+    {% endblock %}

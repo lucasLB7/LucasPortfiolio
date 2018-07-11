@@ -27,18 +27,29 @@ def view_github_repos(request):
     repo_content = json.loads(repos.content)
 
 
-    return render(request, 'repositories/view-repos.html' , {"repos_details":repo_content , "user_details":user_content})
 
+    return render(request, 'repositories/view-repos.html' , {"repos_details":repo_content , "user_details":user_content})
+# ////////////////////////////////////////////////////////////////////////////////
 def homepage(request):
     return render(request, 'home/main.html')
 
+# ////////////////////////////////////////////////////////////////////////////////
 
 def view_python(request):
     python_repos = Resume.objects.all()
 
     return render(request, 'python/main.html' , {"python":python_repos})
 
+# ////////////////////////////////////////////////////////////////////////////////
+
 def view_html(request):
     html_repos = Resume.objects.all()
 
     return render(request, 'html/main.html' , {"HTML":html_repos})
+
+
+
+def view_blender(request):
+    blender_repos = Resume.objects.all()
+
+    return render(request, 'blender/main.html' , {"blender":blender_repos})
