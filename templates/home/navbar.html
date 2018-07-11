@@ -4,45 +4,38 @@
   
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">
-            <img src="../../media/main_static/Decomagna_home_interior_design_kenya.jpg" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
-        </a>
+   
         
       
         <!-- Links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
+            <a class="nav-link" href="/">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
+            <a class="nav-link" href="/repos">ALL REPOSITORIES</a>
           </li>
           {% if user.is_authenticated %}
           <!-- Dropdown -->
           <li class="nav-item dropdown">
                 
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    MORE ACTIONS ↴
+                    QUICK-LINKS
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Link 1</a>
-              <a class="dropdown-item" href="#">Link 2</a>
-              <a class="dropdown-item" href="auth/logout">Logout</a>
+              <a class="dropdown-item" href="#recent">RECENT PROJECTS</a>
+              <a class="dropdown-item" href="#services">ABOUT ME</a>
+              <a class="dropdown-item" href="auth/logout" style="color:red;">LOGOUT</a>
               
             </div>
           </li>
           {% else %}
   
-          <a class='nav_btn_user' href="/accounts/login.html">LOGIN</a>
+          <a class='nav_btn_user' href="/accounts/login.html" style="color:red;">LOGIN</a>
 
           {% endif %}
 
-          <span class="navbar-right">
-          
-                <p class='todays_date'>Todays date:
-                  <strong>{{date|date:"l d-F Y"}}</strong>
-                </p> 
-              </span>
+
 
         </ul>
       </nav>
