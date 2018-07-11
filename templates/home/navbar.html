@@ -15,7 +15,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/repos">ALL REPOSITORIES</a>
           </li>
-          {% if user.is_authenticated %}
+          {% comment %} {% if user.is_authenticated %} {% endcomment %}
           <!-- Dropdown -->
           <li class="nav-item dropdown">
                 
@@ -25,15 +25,15 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#recent">RECENT PROJECTS</a>
               <a class="dropdown-item" href="#services">ABOUT ME</a>
-              <a class="dropdown-item" href="auth/logout" style="color:red;">LOGOUT</a>
+
               
             </div>
-          </li>
+          {% comment %} </li>
           {% else %}
   
           <a class='nav_btn_user' href="/accounts/login.html" style="color:red;">LOGIN</a>
 
-          {% endif %}
+          {% endif %} {% endcomment %}
 
 
 
