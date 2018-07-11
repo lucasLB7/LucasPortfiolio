@@ -15,6 +15,8 @@ from django.conf import settings
 
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 
+from .models import Resume
+
 # ////////////////////////////////////////////////////////////////////////////
 
 def view_github_repos(request):
@@ -28,12 +30,10 @@ def view_github_repos(request):
     return render(request, 'repositories/view-repos.html' , {"repos_details":repo_content , "user_details":user_content})
 
 def homepage(request):
-
-
     return render(request, 'home/main.html')
 
 
-# def view_github_repos(request):
-#     repos = requests.get('https://api.github.com/repositories?q=lucasLB7&access_token={}'.format(settings.GITHUB_API))
-#     content = json.loads(repos.content)
-#     print(repos.json)
+def view_python(request):
+    python_repos = Resume.objects.all()
+
+    return render(request, 'python/main.html' , {"python":python_repos})

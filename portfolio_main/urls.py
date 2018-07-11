@@ -12,5 +12,6 @@ app_name = "main"
 
 urlpatterns = [
     url(r'^$', views.homepage, name = "homepage"),
-    url(r'^repos$', views.view_github_repos, name = "repos")
+    url(r'^repos$', views.view_github_repos, name = "repos"),
+    url(r'my_python_apps$', views.view_python, name = "python")
 ]

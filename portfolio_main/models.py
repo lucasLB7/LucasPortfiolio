@@ -3,7 +3,7 @@ import datetime
 
 
 
-class resume(models.Model):
+class Resume(models.Model):
     cat_choices = (
         ("PYTHON","PYTHON"),
         ("HTLM","HTML"),
@@ -14,10 +14,9 @@ class resume(models.Model):
     title = models.CharField(max_length = 30)
     description = models.TextField()
     date_added = models.DateTimeField(auto_now_add= True)
+    githuburl = models.CharField(max_length = 255, blank = True)
     article_image = models.ImageField()
 
     def __str__(self):
         return self.title
-
-
 
