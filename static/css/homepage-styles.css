@@ -378,3 +378,10 @@ header.masthead p {
     width: auto;
 }
 
+/* ////////////////////////////////////////////////////////// */
+
+.dark-box{
+  background-color: #383737;
+  color: #fff;
+}
+
