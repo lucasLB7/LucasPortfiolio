@@ -25,6 +25,8 @@
 
                 <div class="row">
                     {% for repos in repos_details %}
+                    
+
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
                             {% comment %}
@@ -47,17 +49,29 @@
                 </div>
             </div>
         </div>
-
+        <section class="jumbotron text-center">
+        {% if repos_details.has_other_pages %}
+  <div class=" container pagination">
+    {% if repos_details.has_previous %}
+      <li><a href="?page={{ repos_details.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in repos_details.paginator.page_range %}
+      {% if repos_details.number == i %}
+      <button class="btn btn-danger active"><span>{{ i }} <span class="sr-only">(current)</span></span></button>
+      {% else %}
+      <button class="btn btn-danger"><a href="?page={{ i }}">{{ i }}</a></button>
+      {% endif %}
+    {% endfor %}
+    {% if repos_details.has_next %}
+      <li><a href="?page={{ repos.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </div>
+        </section>
+{% endif %}
     </main>
-
-    <footer class="text-muted">
-        <div class="container">
-            <p class="float-right">
-                <a href="#">Back to top</a>
-            </p>
-            <p>Designed and created by Lucas B. Lambert. All rights reserved</p>
-
-        </div>
-    </footer>
-
     {% endblock %}
+

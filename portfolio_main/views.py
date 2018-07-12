@@ -16,6 +16,7 @@ from django.conf import settings
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 
 from .models import Resume
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 # ////////////////////////////////////////////////////////////////////////////
 
@@ -25,10 +26,22 @@ def view_github_repos(request):
 
     repos = requests.get('https://api.github.com/users/lucasLB7/repos?access_token={}'.format(settings.GITHUB_API))
     repo_content = json.loads(repos.content)
+    page = request.GET.get('page', 1)
+
+
+    paginator = Paginator(repo_content, 10)
+    try:
+        content = paginator.page(page)
+    except PageNotAnInteger:
+        content = paginator.page(1)
+    except EmptyPage:
+        content = paginator.page(paginator.num_pages)
+
+
+    return render(request, 'repositories/view-repos.html' , {"repos_details":content , "user_details":user_content})
 
 
 
-    return render(request, 'repositories/view-repos.html' , {"repos_details":repo_content , "user_details":user_content})
 # ////////////////////////////////////////////////////////////////////////////////
 def homepage(request):
     return render(request, 'home/main.html')
