@@ -66,3 +66,9 @@ def view_blender(request):
     blender_repos = Resume.objects.all()
 
     return render(request, 'blender/main.html' , {"blender":blender_repos})
+
+
+def view_all(request):
+    blender_repos = Resume.objects.all()
+
+    return render(request, 'view_all/main.html' , {"blender":blender_repos})

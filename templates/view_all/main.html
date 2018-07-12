@@ -1,0 +1,147 @@
+{% extends 'repositories/base.html'%}
+{% load static bootstrap4 %}
+{% comment %} {% load mathfilters %} {% endcomment %}
+{% block content %}
+
+
+{% comment %} {{user_details}}
+<h1>BREAK!</h1>
+{{repos_details}}  {% endcomment %}
+          
+          {% comment %} {{user_details}}
+          <h1>BREAK!</h1>
+          {{repos_details}}  {% endcomment %}
+
+
+        <main role="main">
+
+                <section class="jumbotron text-center">
+                    <div class="container">
+                    <h1 class="jumbotron-heading">ALL PROJECTS</h1>
+                    
+                    <p class="lead text-muted">View all my projects                    
+                    </p>
+                    </div>
+                </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+    
+            <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">PYTHON</h1><br>
+                    </div>
+                {% for items in blender %}
+                {% if items.category == "PYTHON" %}
+                
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                    {% comment %} <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> {% endcomment %}
+                    <div class="card-body">
+                        <h3 class="card-text">{{items.title}}</h3>
+                        <p class="card-text">{{items.description|truncatewords:"20"}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            {% if items.githuburl %}
+                            <a class="btn btn-confirm btn-sl js-scroll-trigger" href="{{items.githuburl}}">View on GitHub</a>
+                            {% else %}
+                            <p><small>No GitHub link yet..</small></p>
+                            {% endif %}
+                            {% if items.live_app_deployment %}
+                            <a class="btn btn-danger btn-sl js-scroll-trigger" href="{{items.live_app_deployment}}">View live site</a>
+                            {% else %}
+                            <p><small>No deployed app yet..</small></p>
+                            {% endif %}
+                    
+                    </div>
+                    </div>
+                </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+                               
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">BLENDER</h1><br>
+                </div>
+                    {% for items in blender %}
+                    {% if items.category == "BLENDER" %}
+                    
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                        {% comment %} <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> {% endcomment %}
+                        <div class="card-body">
+                            <h3 class="card-text">{{items.title}}</h3>
+                            <p class="card-text">{{items.description|truncatewords:"20"}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                {% if items.githuburl %}
+                                <a class="btn btn-confirm btn-sl js-scroll-trigger" href="{{items.githuburl}}">View on GitHub</a>
+                                {% else %}
+                                <p><small>No GitHub link yet..</small></p>
+                                {% endif %}
+                                {% if items.live_app_deployment %}
+                                <a class="btn btn-danger btn-sl js-scroll-trigger" href="{{items.live_app_deployment}}">View live site</a>
+                                {% else %}
+                                <p><small>No deployed app yet..</small></p>
+                                {% endif %}
+                        
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                                   
+    
+                </div>
+                <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">HTML</h1><br>
+                        </div>
+                        {% for items in blender %}
+                        {% if items.category == "HTML" %}
+                        
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                            {% comment %} <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> {% endcomment %}
+                            <div class="card-body">
+                                <h3 class="card-text">{{items.title}}</h3>
+                                <p class="card-text">{{items.description|truncatewords:"20"}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    {% if items.githuburl %}
+                                    <a class="btn btn-confirm btn-sl js-scroll-trigger" href="{{items.githuburl}}">View on GitHub</a>
+                                    {% else %}
+                                    <p><small>No GitHub link yet..</small></p>
+                                    {% endif %}
+                                    {% if items.live_app_deployment %}
+                                    <a class="btn btn-danger btn-sl js-scroll-trigger" href="{{items.live_app_deployment}}">View live site</a>
+                                    {% else %}
+                                    <p><small>No deployed app yet..</small></p>
+                                    {% endif %}
+                            
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                                       
+        
+                    </div>
+            </div>
+        </div>
+    
+        </main>
+    
+        <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+            <a href="#">Back to top</a>
+            </p>
+            <p>Designed and created by Lucas B. Lambert. All rights reserved</p>
+
+        </div>
+        </footer>
+
+{% endblock %}
