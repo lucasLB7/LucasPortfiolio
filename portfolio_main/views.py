@@ -24,7 +24,7 @@ def view_github_repos(request):
     user = requests.get('https://api.github.com/users/lucasLB7?access_token={}'.format(settings.GITHUB_API))
     user_content = json.loads(user.content)
 
-    repos = requests.get('https://api.github.com/users/lucasLB7/repos?access_token={}'.format(settings.GITHUB_API))
+    repos = requests.get('https://api.github.com/users/lucasLB7/repos?sort=asc&access_token={}'.format(settings.GITHUB_API))
     repo_content = json.loads(repos.content)
     page = request.GET.get('page', 1)
 
