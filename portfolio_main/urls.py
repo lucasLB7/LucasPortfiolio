@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'my_python_apps$', views.view_python, name = "python"),
     url(r'my_html_apps$', views.view_html, name = "html"),
     url(r'^my_blender_apps$', views.view_blender, name = "blender"),
-    url(r'^view_all_categories$', views.view_all , name = "all_categories")
+    url(r'^view_all_categories$', views.view_all , name = "all_categories"),
+    url(r'^about_me$', views.about_me , name = 'about_me')
 ]
