@@ -356,3 +356,11 @@ header.masthead p {
     width: auto;
 }
 
+.exp{
+  min-height: 0px;
+}
+
+.hidden-by-default{
+  display: none;
+}
+
