@@ -1,0 +1,24 @@
+{% block content %}
+{% load bootstrap4 %}
+
+  
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+   
+        
+      
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/repos">ALL REPOSITORIES</a>
+          </li>
+          {% comment %} {% if user.is_authenticated %} {% endcomment %}
+          <!-- Dropdown -->
+          
+        </ul>
+      </nav>
+
+{% endblock %}
