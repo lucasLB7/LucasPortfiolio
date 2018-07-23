@@ -15,6 +15,7 @@ import dj_database_url
 from decouple import config
 import django_heroku
 django_heroku.settings(locals(), staticfiles=False)
+import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -141,3 +142,11 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+cloudinary.config( 
+  cloud_name = config("CLOUD_NAME"), 
+  api_key = config("CLOUD_API"), 
+  api_secret = config("API_SECRET") 
+)
+
+
