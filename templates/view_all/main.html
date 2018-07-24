@@ -35,7 +35,7 @@
                 {% if items.category == "PYTHON" %}
                 
                 <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
+                    <div class="card mb-4 box-shadow", style="background-image:url({{items.article_image.url}}); background-repeat: no-repeat; background-size:cover;">
                     {% comment %} <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> {% endcomment %}
                     <div class="card-body">
                         <h3 class="card-text">{{items.title}}</h3>
@@ -69,7 +69,7 @@
                     {% if items.category == "BLENDER" %}
                     
                     <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
+                        <div class="card mb-4 box-shadow", style="background-image:url({{items.article_image.url}}); background-repeat: no-repeat; background-size:cover;">
                         {% comment %} <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> {% endcomment %}
                         <div class="card-body">
                             <h3 class="card-text">{{items.title}}</h3>
@@ -104,7 +104,6 @@
                         
                         <div class="col-md-4">
                             <div class="card mb-4 box-shadow" style="background-image:url({{items.article_image.url}}); background-repeat: no-repeat; background-size:cover;">
-                            {% comment %} <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"> {% endcomment %}
                             <div class="card-body">
                                 <h3 class="card-text">{{items.title}}</h3>
                                 <p class="card-text">{{items.description|truncatewords:"20"}}</p>
